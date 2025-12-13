@@ -1,0 +1,19 @@
+/* Bolota (Title font) */
+@font-face {
+  font-family: 'Bolota';
+  src: url(../resources/Bolota/Bolota\ Bold.woff2) format('woff2');
+}
+
+/* Mona sans (body font) */
+@font-face {
+  font-family: 'Mona sans';
+  src: url(../resources/Mona\ sans/MonaSans.woff2) format('woff2');
+  font-weight: 200 900;
+}
+
+/* Myanmar font */
+@font-face {
+  font-family: 'Century burma';
+  src: url(../resources/Century\ burma/centuryBurma.woff2) format('woff2');
+  font-weight: 200 900;
+}

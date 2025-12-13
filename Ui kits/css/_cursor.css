@@ -1,0 +1,51 @@
+.cursor__outline,
+.cursor__dot {
+  pointer-events: none;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.cursor__outline {
+  width: 1.35rem;
+  border: 2px solid var(--color-100);
+  transition: var(--animation-bounce-slow);
+}
+
+.cursor__dot {
+  width: 0.2rem;
+  background-color: var(--color-100);
+  transition: var(--animation-bounce-fast);
+}
+
+.track-bus__line-hover-container,
+.routes-hover-container,
+.bus__line-hover-container,
+.bus__stop-hover-container,
+.save__route-hover-container,
+.history-hover-container {
+  pointer-events: none;
+  opacity: 0;
+  padding: 0.25em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 20;
+  transform: translate(-50%, -120%);
+  border: var(--border-primary);
+  border-radius: 23em;
+  background-color: var(--color-100);
+  transition: all var(--animation-bounce-primary);
+}
+
+.track-bus__line-hover-container-show,
+.routes-hover-container-show,
+.bus__line-hover-container-show,
+.bus__stop-hover-container-show,
+.save__route-hover-container-show,
+.history-hover-container-show {
+  pointer-events: all;
+  opacity: 1;
+}

@@ -1,0 +1,104 @@
+.nearest-bus__stops-close-btn,
+.routes-close-btn,
+.reminder-noti-close-btn,
+.feedback-close-btn,
+.save__routes-close-btn,
+.bus__lines-close-btn,
+.bus__stops-close-btn,
+.history-close-btn {
+  margin-inline-start: 265px;
+}
+
+.text-timeup{
+  margin-top: 20px;
+}
+
+.save__routes-wrapper {
+  margin-block-start: 2em;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.15em;
+  flex-wrap: wrap;
+}
+
+.save,
+.new__save {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 145px;
+  aspect-ratio: 1;
+  border-radius: 1.5em;
+  border: var(--border-primary);
+  background-color: var(--color-lightgray);
+}
+
+.save .dash__border,
+.new__save .dash__border {
+  rx: 22px;
+  ry: 22px;
+}
+
+.save:hover .dash__border,
+.new__save:hover .dash__border {
+  stroke-dashoffset: 10px;
+}
+
+.reminder-noti-overlay,
+.feedback-overlay,
+.saveRoute__opt-overlay,
+.resetAcc__data-overlay {
+  pointer-events: none;
+  opacity: 0;
+  z-index: 11;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+.reminder-noti-overlay-show,
+.feedback-overlay-show,
+.saveRoute__opt-overlay-show,
+.resetAcc__data-overlay-show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.saveRoute__opt-container {
+  z-index: 12;
+  width: 400px;
+  color: var(--color-lightgray);
+}
+
+.feedback-close-btn,
+.saveRoute__opt-close-btn {
+  margin-inline-start: calc(100% - 2.75em);
+}
+
+.saveRoute__opt-container p {
+  margin-block-end: 1.75em;
+  color: var(--color-dark);
+}
+
+.save__routes-content {
+  margin-block-start: 1.25em;
+}
+
+.save__routes-content h4 {
+  font-size: 1.25em;
+}
+
+.save__routes-content p {
+  font-size: 1em;
+  color: var(--color-text-dark);
+}
+
+.no__content-box {
+  display: none;
+  text-align: center;
+  margin-block-start: 1.5em;
+}
+
+.no__content-box > button {
+  margin-block-start: 1em;
+}

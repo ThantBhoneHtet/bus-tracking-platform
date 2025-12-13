@@ -1,0 +1,175 @@
+.hero {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.nav__lists-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  width: max-content;
+  height: 100%;
+  padding: 2em 1em;
+  border-top-left-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
+  border-right: var(--border-primary);
+  background-color: var(--color-light);
+}
+
+.nav__lists-wrapper button svg {
+  width: 1.15em;
+}
+
+.user__actions-container,
+.loginUser__actions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-block-start: 1em;
+}
+
+.loginUser__actions-container::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--color-gray);
+  border-radius: 0.25em;
+}
+
+/* Pop up container */
+.popup-container {
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 100%;
+  padding: 2em 1.25em;
+  border-right: var(--border-primary);
+  background-color: var(--color-light);
+  transition: all var(--animation-bounce-primary);
+}
+
+.popup-box-show {
+  pointer-events: all;
+  opacity: 1;
+  left: 5.2em;
+}
+
+.nav__lists-active {
+  fill: var(--color-gray) !important;
+}
+
+.routes-wrapper,
+.save__routes-wrapper,
+.bus__lines-wrapper,
+.bus__stops-wrapper,
+.history-wrapper {
+  margin-block-start: 2em;
+}
+
+.routes-wrapper .btn-container {
+  text-align: center;
+  margin-block-start: 1.5em;
+}
+
+.bus__stops-wrapper > p {
+  text-align: center;
+}
+
+.chosen_busline-routes-lists,
+.save__routes-lists,
+.bus__lines-lists,
+.track-bus__stops-lists,
+.bus__stops-lists,
+.history-lists {
+  overflow-y: scroll;
+  max-height: 63vh;
+  margin-block-start: 1.5em;
+}
+
+.routes-lists {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-block-start: 1.5em;
+}
+
+.info-text {
+  text-align: center;
+  margin-block-start: 1.5em;
+  color: var(--color-text-dark);
+}
+
+.bus__content {
+  padding: 0.85em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  border-bottom: var(--border-secondary);
+}
+
+.bus__content:last-child {
+  border-bottom: none;
+}
+
+.save__route-content {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.save__route {
+  justify-content: space-between;
+}
+
+.track-bus__line-info {
+  justify-content: space-between;
+}
+
+.estimated-time,
+.from,
+.to,
+.name__en,
+.name__mm {
+  font-size: 1em;
+  color: var(--color-dark);
+}
+
+.to,
+.name__mm {
+  margin-block-start: 0.5em;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.bus-reminder {
+  margin-block-start: 2em;
+}
+
+.bus-reminder > form {
+  margin-block-start: 1em;
+}
+
+#tracking {
+  display: none;
+}
+
+.not-available,
+.chooseText,
+.choose_busLine_to_route {
+  display: none;
+}
+
+

@@ -1,0 +1,47 @@
+/* .bus__lines-container {
+  opacity: 1;
+  left: 5.2em;
+  pointer-events: all;
+} */
+
+.bus__lines-wrapper,
+.bus__stops-wrapper {
+  margin-block-start: 2em;
+}
+
+.track-bus__stops-lists,
+.bus__lines-lists,
+.bus__stops-lists {
+  overflow-y: scroll;
+  height: 63vh;
+  margin-block-start: 1.5em;
+}
+
+.info-text {
+  text-align: center;
+  margin-block-start: 1.5em;
+  color: var(--color-gray);
+}
+
+.bus__content {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 0.75em;
+  border-bottom: var(--border-secondary);
+}
+
+.bus__content:last-child {
+  border-bottom: none;
+}
+
+.from,
+.to {
+  font-size: 1em;
+  color: var(--color-dark);
+}
+
+.to,
+.name__mm {
+  margin-block-start: 0.5em;
+}
