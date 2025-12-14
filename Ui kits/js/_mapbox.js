@@ -111,8 +111,15 @@ function displayMap(position) {
             const busStop_icon = document.createElement('div');
             busStop_icon.id = 'busStop_marker';
 
+            const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(`
+                <h3>${busStop.name_en}</h3>
+                <p>${busStop.name_mm}</p>
+                <p>Lat: ${busStop.latitude}, Lng: ${busStop.longitude}</p>
+            `);
+
             const marker = new mapboxgl.Marker(busStop_icon)
                 .setLngLat([busStop.longitude, busStop.latitude])
+                .setPopup(popup)
                 .addTo(map);
 
             return marker;
