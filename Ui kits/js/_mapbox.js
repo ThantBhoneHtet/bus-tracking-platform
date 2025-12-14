@@ -9,6 +9,11 @@ const map = new mapboxgl.Map({
 });
 map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
 
+// Add event listener for map style change
+document.getElementById('map-style-select').addEventListener('change', function() {
+    map.setStyle(this.value);
+});
+
 // fetch data for busStop info
 let busStopsInfo = [];
 fetch('FetchBusStopsInfo.php')
@@ -54,8 +59,7 @@ function displayMap(position) {
 
     //  --------------------- Map onload (currentlocation) ---------------------   // Start
 
-
-    map.on('load', () => {
+    function initializeMap() {
 
         geolocateControl.trigger();
 
@@ -525,7 +529,7 @@ function displayMap(position) {
                                 'line-cap': 'round'
                             },
                             'paint': {
-                                'line-color': '#e01616',
+                                'line-color': '#00ae0c',
                                 'line-width': 5,
                                 'line-opacity': 0.75
                             }
@@ -562,7 +566,10 @@ function displayMap(position) {
 
           });
 
-    })
+    }
+
+    map.on('load', initializeMap);
+    // map.on('styledata', () => { if (map.isStyleLoaded()) { initializeMap(); } });
 }
 function removeRoute(map, id) {
     if (map.getLayer(id)) {

@@ -149,7 +149,7 @@ const openPopupDetailBox = function (container) {
 
 
 document.querySelector('form').addEventListener('submit', (e) => {
-  e.preventDefault()
+  // e.preventDefault()
 })
 
 const saveRouteBoxDisplay = function () {

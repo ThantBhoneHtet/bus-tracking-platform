@@ -49,6 +49,17 @@ $busStop_info = fetch_busStop_info();
       display: none !important;
     }
 
+    .map-style-select {
+      position: absolute;
+      bottom: 120px;
+      right: 10px;
+      z-index: 1000;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 5px;
+      border-radius: 4px;
+    }
+
     .mapboxgl-popup-close-button {
       display: none;
     }
@@ -124,6 +135,11 @@ $busStop_info = fetch_busStop_info();
 
 <body>
   <button class="btn btn-primary current_location"></button>
+
+  <select id="map-style-select" class="map-style-select">
+    <option value="mapbox://styles/mapbox/streets-v11">Streets</option>
+    <option value="mapbox://styles/mapbox/satellite-streets-v12">Satellite Streets</option>
+  </select>
 
   <main class="hero">
     <div id="map" style="width: 100%; height: 100vh; position: absolute"></div>

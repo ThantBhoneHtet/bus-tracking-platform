@@ -39,12 +39,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                 $mail->isSMTP();
                 $mail->Host       = 'smtp.gmail.com'; // Replace with your SMTP server
                 $mail->SMTPAuth   = true;
-                $mail->Username   = 'kira84174@gmail.com'; // Replace with your email
-                $mail->Password   = 'kcyu pkfq czvz fugq'; // Replace with your email password
+                $mail->Username   = 'thant2004bhone@gmail.com'; // Replace with your email
+                $mail->Password   = 'qyvb oijv vacm yiyi'; // Replace with your email password
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port       = 587;
         
-                $mail->setFrom("kira84174@gmail.com", 'Blip(Bus Tracking)');
+                $mail->setFrom("thant2004bhone@gmail.com", 'Blip(Bus Tracking)');
                 $mail->addAddress($userMail);
         
                 $mail->isHTML(true);

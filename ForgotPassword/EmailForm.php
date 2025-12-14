@@ -25,7 +25,7 @@
             <svg class="dash__border-container">
               <rect stroke-linecap="round" class="dash__border"></rect>
             </svg>
-            <form action="SendingMail.php" method="POST">
+            <form action="./SendingMail.php" method="POST">
               <div class="form__field">
                 <label for="">Email</label>
                 <div class="form__input-container">
